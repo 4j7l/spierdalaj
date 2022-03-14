@@ -30,13 +30,13 @@ bot.loadPlugin(cmd)
 
 bot.on('login',function(){
 	console.log("Logged In")
-	bot.chat("Joined succesfully, bot by logowaniee");
+	bot.chat("Joined succesfully, bot by 4j7l#7124");
 });
 
 bot.on('time', function(time) {
 	if(nightskip == "true"){
 	if(bot.time.timeOfDay >= 13000){
-	bot.chat('/time set day')
+		keepAlive();
 	}}
     if (connected <1) {
         return;
