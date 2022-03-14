@@ -1,7 +1,6 @@
 const mineflayer = require('mineflayer')
 const cmd = require('mineflayer-cmd').plugin
 const fs = require('fs');
-const keepAlive = require('./server.js')
 let rawdata = fs.readFileSync('config.json');
 let data = JSON.parse(rawdata);
 var lasttime = -1;
@@ -36,7 +35,7 @@ bot.on('login',function(){
 bot.on('time', function(time) {
 	if(nightskip == "true"){
 	if(bot.time.timeOfDay >= 13000){
-		keepAlive();
+		bot.chat("lol");
 	}}
     if (connected <1) {
         return;
